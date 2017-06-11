@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="470.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="employeeswsinf.FXMLDocumentController">
+    <children>
+        <Button fx:id="btnAdd" alignment="CENTER" layoutX="15.0" layoutY="50.0" onAction="#btnAddAction" prefHeight="31.0" prefWidth="150.0" text="Dodaj Pracownika" />
+        <Label fx:id="label" alignment="CENTER_RIGHT" layoutX="15.0" layoutY="90.0" minHeight="16" minWidth="69" prefHeight="31.0" prefWidth="150.0" text="Imię:" />
+      <Label fx:id="label1" alignment="CENTER" layoutX="15.0" layoutY="15.0" maxWidth="347.0" minHeight="16" minWidth="69" prefHeight="30.0" prefWidth="345.0" text="Zarządzanie Pracownikiem" textFill="#1a00ff">
+         <font>
+            <Font name="Calibri" size="20.0" />
+         </font></Label>
+      <Button fx:id="btnSaveEmployee" alignment="CENTER" layoutX="175.0" layoutY="50.0" onAction="#btnSaveEmployeeAction" prefHeight="31.0" prefWidth="187.0" text="Zapisz Pracownika" />
+      <Label fx:id="label2" alignment="CENTER_RIGHT" layoutX="15.0" layoutY="125.0" minHeight="16" minWidth="69" prefHeight="31.0" prefWidth="150.0" text="Nazwisko:" />
+      <Label fx:id="label21" alignment="CENTER_RIGHT" layoutX="15.0" layoutY="160.0" minHeight="16" minWidth="69" prefHeight="31.0" prefWidth="150.0" text="Numer PESEL:" />
+      <Label fx:id="label211" alignment="CENTER_RIGHT" layoutX="15.0" layoutY="195.0" minHeight="16" minWidth="69" prefHeight="31.0" prefWidth="150.0" text="Płaca BRUTTO:" />
+      <TextField fx:id="txtName" layoutX="175.0" layoutY="90.0" promptText="Imię" />
+      <TextField fx:id="txtSurname" layoutX="175.0" layoutY="125.0" promptText="Nazwisko" />
+      <TextField fx:id="txtIdNumber" layoutX="175.0" layoutY="160.0" promptText="PESEL" />
+      <TextField fx:id="txtReward" layoutX="175.0" layoutY="195.0" promptText="Płaca" />
+      <Label fx:id="label11" layoutX="380.0" layoutY="15.0" maxWidth="347.0" minHeight="16" minWidth="69" prefHeight="30.0" prefWidth="345.0" text="Wybierz pracownika" />
+      <TableView fx:id="lstEmployees" layoutX="380.0" layoutY="56.0" onMouseClicked="#lstEmployeesAction" prefHeight="350.0" prefWidth="500.0">
+        <columns>
+          <TableColumn fx:id="columnName" prefWidth="123.0" text="Imię" />
+            <TableColumn fx:id="columnSurname" prefWidth="118.0" text="Nazwisko" />
+            <TableColumn fx:id="columnIdNumber" prefWidth="135.0" text="PESEL" />
+            <TableColumn fx:id="columnReward" prefWidth="123.0" text="Płaca BRUTTO" />
+        </columns>
+         <effect>
+            <DropShadow />
+         </effect>
+      </TableView>
+      <Button fx:id="btnSaveChanges" alignment="CENTER" layoutX="15.0" layoutY="250.0" onAction="#btnSaveChangesAction" prefHeight="31.0" prefWidth="150.0" text="Zapisz Zmiany" />
+      <Button fx:id="btnDelete" alignment="CENTER" layoutX="210.0" layoutY="250.0" onAction="#btnDeleteAction" prefHeight="31.0" prefWidth="150.0" text="Usuń Pracownika" />
+      <Separator layoutX="14.0" layoutY="300.0" prefWidth="350.0" />
+      <Label fx:id="lblInfo" layoutX="15.0" layoutY="420.0" minHeight="16" minWidth="69" prefHeight="31.0" prefWidth="806.0" text="Pasek informacyjny:" textFill="#048000" />
+      <Button fx:id="btnRefresh" alignment="CENTER" layoutX="730.0" layoutY="15.0" onAction="#btnRefreshAction" prefHeight="31.0" prefWidth="150.0" text="Odśwież tabelę" />
+    </children>
+</AnchorPane>
